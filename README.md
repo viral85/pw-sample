@@ -1,60 +1,67 @@
 # Picture-Works
 
-## git clone
+- git clone
 
-run `git clone https://github.com/viral85/pw-sample.git`
-
-
-## composer
-
-run `composer install`
-run `composer update`
+	`git clone https://github.com/viral85/pw-sample.git`
 
 
-## make copy of .env from .env.example
+- composer
 
-run `cp .env.example .env`
+	`composer install`
 
-
-## add your database related configuration
-
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=pwworks
-DB_USERNAME=root
-DB_PASSWORD=
+	`composer update`
 
 
-## add application key
+- make copy of .env from .env.example
 
-run `php artisan key:generate`
-
-
-## cache all configurations
-
-run `php artisan config:cache`
+	`cp .env.example .env`
 
 
-## migrate & seed
+- add your database related configuration
 
-run `php artisan migrate --seed`
+	DB_CONNECTION=pgsql
+
+	DB_HOST=127.0.0.1
+	
+	DB_PORT=3306
+	
+	DB_DATABASE=pwworks
+	
+	DB_USERNAME=root
+	
+	DB_PASSWORD=
 
 
-## serve application
+- add application key
 
-run `php artisan serve --port=8080`
-
-
-## add comment from console command
-# command accept 2 arguments. ID and Comment. 1 is ID, 'Hello Viral' is Comment
-
-run `php artisan add:comment 1 'Hello Viral'`
+	`php artisan key:generate`
 
 
-## unit test
+- cache all configurations
 
-run `./vendor/bin/phpunit --filter 'Tests\\Feature'`
+	`php artisan config:cache`
+
+
+- migrate & seed
+
+ 	`php artisan migrate --seed`
+
+
+- serve application
+
+	`php artisan serve --port=8080`
+
+
+- add comment from console command
+
+	command accept 2 arguments. ID and Comment. 1 is ID, 'Hello Viral' is Comment
+
+	`php artisan add:comment 1 'Hello Viral'`
+
+
+- unit test
+
+	`./vendor/bin/phpunit --filter 'Tests\\Feature'`
 
 
 - I have used users and comments table. User have many comments. I have used repositories to retrive user details, store user's comments.
