@@ -1,21 +1,21 @@
 <?php
-
+# test/Feature/UserTest.php
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class UserTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A user test.
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testUserTest()
     {
         $response = $this->get('/');
-
-        $response->assertStatus(200);
+        $response->assertRedirect('/user/1');
+        $response->assertStatus(302);
     }
 }
